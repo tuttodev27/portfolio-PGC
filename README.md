@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# Portfolio – Pablo Gallegos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+👋 Hola, soy **Pablo Gallegos**, **Senior Backend Java Engineer** con más de **10 años de experiencia en TI**, especializado en el diseño y desarrollo de **sistemas backend escalables y de alta criticidad**, principalmente en el sector financiero.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Perfil Profesional
 
-## React Compiler
+- Senior Backend Java Engineer  
+- Experiencia en **banca y sistemas de misión crítica**
+- Enfoque en **arquitectura, calidad y resiliencia**
+- Interés en roles de **Arquitectura de Software** y **DevOps**
+- Abierto a oportunidades **remotas e internacionales**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Stack Principal
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Java** (8 / 11 / 17 / 21)
+- **Spring Boot**, APIs REST
+- **Microservicios**, Clean Architecture, DDD
+- **JUnit, Mockito**
+- **Docker, Kubernetes, CI/CD**
+- **React + TypeScript** (este portfolio)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Portfolio Online
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🌐 **Demo:**  
+👉 https://porfolio-pablo.netlify.app/
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Sobre este proyecto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este repositorio contiene el código fuente de mi **portfolio personal**, donde presento:
+- Mi perfil profesional
+- Experiencia laboral
+- Proyectos relevantes
+- Tecnologías y enfoque de trabajo
+
+---
+
+## Contacto
+
+📬 LinkedIn: *(agregar link)*  
+
+Gracias por visitar mi portfolio 🙌
+
