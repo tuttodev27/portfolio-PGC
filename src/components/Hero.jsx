@@ -8,14 +8,14 @@ export default function Hero() {
           </h1>
 
           <p className="mt-3 text-lg md:text-xl text-white/80">
-            Senior Backend Java Engineer ·{" "}
+            Senior Backend Java Engineer · Sistemas financieros · Microservicios con Spring Boot
             <span className="text-emerald-300">Spring Boot</span> · Microservices
           </p>
 
           <p className="mt-4 text-white/70 max-w-xl leading-relaxed">
-            Especializado en el diseño y desarrollo de soluciones escalables, seguras y resilientes
-            con Java y Spring (Boot/Framework) en arquitecturas de microservicios, con experiencia en
-            entornos financieros de alta criticidad.
+            Especializado en diseño y desarrollo de soluciones escalables, seguras y resilientes con Java y Spring Boot.
+
+            Experiencia en sistemas financieros de alta criticidad, optimización de rendimiento y arquitecturas de microservicios.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -30,7 +30,7 @@ export default function Hero() {
               href="#projects"
               className="px-5 py-2.5 rounded-lg border border-white/25 hover:bg-white/10 font-medium transition"
             >
-              Proyecto
+             Ver Proyectos
             </a>
           </div>
 
