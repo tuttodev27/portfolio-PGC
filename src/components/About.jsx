@@ -7,11 +7,11 @@ export default function About() {
       company: "Qintess",
       period: "Mayo 2025 - Octubre 2025",
       bullets: [
-        "Desarrollo y mantenimiento de microservicios backend en Java y Spring Boot para plataformas bancarias de alta disponibilidad y criticidad",
-        "Análisis y resolución de incidentes productivos complejos, identificando fallas intermitentes en flujos críticos de negocio",
-        "Investigación de logs centralizados en ElasticSearch, detectando configuraciones faltantes a nivel de pods en Kubernetes que impactaban la estabilidad del sistema",
-        "Corrección y estandarización de configuraciones de despliegue, logrando estabilizar los flujos de negocio y mejorar la confiabilidad del sistema",
-        "Implementación de testing unitario con JUnit y Mockito, alcanzando una cobertura cercana al 90%",
+        "Desarrollo y mantenimiento de microservicios backend en Java y Spring Boot para plataformas bancarias de alta disponibilidad y criticidad.",
+        "Análisis y resolución de incidentes productivos complejos, identificando fallas intermitentes en flujos críticos de negocio.",
+        "Investigación de logs centralizados en ElasticSearch, detectando configuraciones faltantes a nivel de pods en Kubernetes que impactaban la estabilidad del sistema.",
+        "Corrección y estandarización de configuraciones de despliegue, logrando estabilizar los flujos de negocio y mejorar la confiabilidad del sistema,",
+        "Implementación de testing unitario con JUnit y Mockito, alcanzando una cobertura cercana al 90%.",
       ],
     },
     {
@@ -19,11 +19,11 @@ export default function About() {
       company: "ImageMakers",
       period: "Septiembre 2023 - Septiembre 2024",
       bullets: [
-        "Diseño e implementación de APIs REST para procesos KYC (Know Your Customer), orientados a la validación y verificación de identidad digital de clientes",
-        "Desarrollo de nuevas funcionalidades en la ficha KYC, asegurando seguridad, trazabilidad y cumplimiento normativo en procesos bancarios críticos",
-        "Optimización de flujos backend, logrando mejoras cercanas al 30% en performance",
-        "Desarrollo de pruebas unitarias e integraciones utilizando JUnit, Mockito y Postman",
-        "Trabajo colaborativo con equipos de QA, negocio y seguridad, bajo metodologías ágiles",
+        "Diseño e implementación de APIs REST para procesos KYC (Know Your Customer), orientados a la validación y verificación de identidad digital de clientes.",
+        "Desarrollo de nuevas funcionalidades en la ficha KYC, asegurando seguridad, trazabilidad y cumplimiento normativo en procesos bancarios críticos.",
+        "Optimización de flujos backend, logrando mejoras cercanas al 30% en performance.",
+        "Desarrollo de pruebas unitarias e integraciones utilizando JUnit, Mockito y Postman.",
+        "Trabajo colaborativo con equipos de QA, negocio y seguridad, bajo metodologías ágiles.",
       ],
     },
     {
@@ -31,11 +31,11 @@ export default function About() {
       company: "The bridge Social",
       period: "Febrero 2021 - Mayo 2021",
       bullets: [
-        "Diseño e implementación desde cero de una plataforma e-Wallet para la gestión de pagos y transacciones digitales, orientada a transacciones financieras seguras, alta disponibilidad y escalabilidad",
-        "Aplicación de patrones de diseño (FACADE, DAO, MVC) mejorando la mantenibilidad y escalabilidad del código",
-        "Implementación de alta cobertura de testing unitario con JUnit y Mockito (>90%)",
-        "Integración de servicios de mensajería con Apache Kafka para procesamiento asíncrono de transacciones",
-        "Colaboración en equipos ágiles utilizando Scrum y herramientas como Jira y Confluence",
+        "Diseño e implementación desde cero de una plataforma e-Wallet para la gestión de pagos y transacciones digitales, orientada a transacciones financieras seguras, alta disponibilidad y escalabilidad.",
+        "Aplicación de patrones de diseño (FACADE, DAO, MVC) mejorando la mantenibilidad y escalabilidad del código.",
+        "Implementación de alta cobertura de testing unitario con JUnit y Mockito (>90%).",
+        "Integración de servicios de mensajería con Apache Kafka para procesamiento asíncrono de transacciones.",
+        "Colaboración en equipos ágiles utilizando Scrum y herramientas como Jira y Confluence.",
         "Uso de Docker para contenerización y despliegue en entornos de desarrollo y producción",
       ],
     },
@@ -114,7 +114,7 @@ export default function About() {
       <div className="grid md:grid-cols-2 gap-8 mb-8">
         <div className="space-y-3">
           <p className="text-base md:text-lg text-slate-700 leading-relaxed">
-            Ingeniero de Software Backend Senior con más de 10 años de experiencia en el sector
+            Ingeniero de Software Backend con más de 10 años de experiencia en el sector
             tecnológico, y con una trayectoria de 5 
           </p>
 
