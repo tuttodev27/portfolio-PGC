@@ -36,7 +36,7 @@ export default function About() {
         "Implementación de alta cobertura de testing unitario con JUnit y Mockito (>90%).",
         "Integración de servicios de mensajería con Apache Kafka para procesamiento asíncrono de transacciones.",
         "Colaboración en equipos ágiles utilizando Scrum y herramientas como Jira y Confluence.",
-        "Uso de Docker para contenerización y despliegue en entornos de desarrollo y producción",
+        "Uso de Docker para contenerización y despliegue en entornos de desarrollo y producción.",
       ],
     },
   ];
