@@ -21,12 +21,13 @@ export default function Contact() {
     "w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all";
 
   return (
-    <section id="contact" className="bg-[#0b0f14] text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="contact" className="section-base">
+      <div className="container-max">
 
-        {/* Section header — mismo patrón */}
-        <div className="mb-10">
-          <h2 className="text-3xl font-bold text-white">Contacto</h2>
+        {/* Section header */}
+        <div className="section-header">
+          
+          <h2 className="section-title">Contacto</h2>
         </div>
 
         <div className="grid md:grid-cols-[1fr_1.8fr] gap-10">
@@ -40,19 +41,21 @@ export default function Contact() {
 
             {/* Links — mismo estilo code block */}
             <div className="bg-[#0f172a] border border-slate-700 rounded-xl p-5 font-mono text-sm">
-              <p className="text-blue-300/60 text-xs mb-4">// encuéntrame en</p>
+              <p className="text-blue-300/60 text-xs mb-4"> Encuéntrame en</p>
               <div className="space-y-4">
 
-                {/* Email */}
+                {/* CV */}
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 bg-slate-800 border border-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-blue-400/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
                   <div>
-                    <span className="text-white/25 text-xs">email → </span>
-                    <span className="text-white/60 text-xs">pablo@email.com</span>
+                    <span className="text-white/25 text-xs">CV → </span>
+                    <a href="/Pablo_Alexis_Cristóbal_Gallegos_Celis_CV.pdf" download className="text-white/60 text-xs hover:text-blue-400 transition-colors">
+                      Descargar CV
+                    </a>
                   </div>
                 </div>
 
@@ -65,7 +68,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="text-white/25 text-xs">linkedin → </span>
-                    <span className="text-white/60 text-xs">/in/pablo-gallegos</span>
+                    <a href="https://www.linkedin.com/in/pablo-alexis-gallegos-celis/" target="_blank" rel="noopener noreferrer" className="text-white/60 text-xs hover:text-blue-400 transition-colors">
+                      /in/pablo-alexis-gallegos-celis
+                    </a>
                   </div>
                 </div>
 

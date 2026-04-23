@@ -17,25 +17,26 @@ export default function Navbar() {
     }`}>
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        <a href="#" className="text-sm font-bold text-white/80 tracking-tight hover:text-white transition-colors">
-          pablo<span className="text-blue-400">.</span>dev
+        <a href="#" className="nav-brand">
+          pablo<span className="text-accent">.</span>dev
         </a>
 
         <ul className="flex items-center gap-1">
           {[
-            { label: "sobre mi",    href: "#about" },
+            { label: "sobre mi",    href: "#sobre-mi" },
             { label: "proyectos",   href: "#projects" },
             { label: "experiencia", href: "#experience" },
+            { label: "educación",   href: "#educacion" },
             { label: "contacto",    href: "#contact" },
           ].map(({ label, href }) => (
             <li key={label}>
-              <a href={href} className="px-3 py-1.5 rounded-md text-xs font-mono text-white/40 hover:text-white/80 hover:bg-white/5 transition-all">
+              <a href={href} className="nav-link">
                 {label}
               </a>
             </li>
           ))}
           <li className="ml-3">
-            <a href="#contact" className="px-4 py-1.5 rounded-md bg-blue-500/15 border border-blue-500/25 text-blue-400 text-xs font-mono hover:bg-blue-500/25 transition-all">
+            <a href="#contact" className="btn-cta">
               contrátame
             </a>
           </li>

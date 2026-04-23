@@ -1,16 +1,32 @@
 export default function Hero() {
+  const stack = [
+    { tech: "Java", level: "experto", progress: 100 },
+    { tech: "Spring Boot / Spring Security",  level: "avanzado", progress: 88 },
+    { tech: "SQL / PostgreSQL", level: "experto", progress: 100 },
+    { tech: "Docker / CI/CD / Jenkins", level: "intermedio", progress: 80 },
+    { tech: "Git", level: "experto", progress: 100 },
+    { tech: "JavaScript", level: "avanzado", progress: 85 },
+    { tech: "REST APIs", level: "experto", progress: 95 },
+    { tech: "Kafka", level: "intermedio", progress: 80 },
+  ];
+
+  const getBarColor = (percent) => {
+    if (percent >= 90) return "bg-blue-400";
+    if (percent >= 80) return "bg-emerald-400";
+    return "bg-violet-400";
+  };
   return (
-    <section className="bg-[#0b0f14] text-white min-h-screen relative overflow-hidden">
+    <section className="section-base min-h-screen relative overflow-hidden">
       <div className="absolute top-0 left-1/3 w-[500px] h-[300px] bg-blue-600/4 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-[1fr_auto] gap-16 items-center relative z-10">
+      <div className="container-max py-20 grid md:grid-cols-[1fr_auto] gap-16 items-center relative z-10">
 
         {/* LEFT */}
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-slate-700 bg-slate-800/80 mb-6">
-            <span className="text-blue-400/60 font-mono text-xs">//</span>
+            <span className="text-blue-400/60 font-mono text-xs"></span>
             <span className="text-blue-400 font-mono text-xs tracking-wide">
-              Senior Software Engineer · Java · Spring Boot · 10+ años
+              Senior Software Engineer · Java · Spring Boot · JavaScript · 10+ años
             </span>
           </div>
 
@@ -37,17 +53,17 @@ export default function Hero() {
           <div className="flex gap-8 mb-8 pb-8 border-b border-white/5">
             {[["10+","años en TI"],["8","años en Java"],["3","proyectos clave"]].map(([n,l]) => (
               <div key={l}>
-                <div className="text-2xl font-black text-blue-400 tracking-tight">{n}</div>
-                <div className="text-xs text-white/30 font-mono mt-0.5">{l}</div>
+                <div className="stat-number">{n}</div>
+                <div className="stat-label">{l}</div>
               </div>
             ))}
           </div>
 
           <div className="flex flex-wrap gap-3">
-            <a href="#projects" className="px-6 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-400 transition-colors font-semibold text-sm shadow-lg shadow-blue-500/20">
+            <a href="#projects" className="btn-primary">
               Ver proyectos ↗
             </a>
-            <a href="#contact" className="px-6 py-2.5 rounded-lg border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all text-sm font-medium text-white/60 hover:text-white">
+            <a href="#contact" className="btn-secondary">
               Contacto
             </a>
           </div>
@@ -86,6 +102,36 @@ export default function Hero() {
           </div>
         </div>
 
+      </div>
+
+      {/* Stack Técnico */}
+      <div className="max-w-6xl mx-auto px-6 mt-16">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-white">Stack Técnico</h2>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {stack.map(({ tech, level, progress }) => (
+            <div
+              key={tech}
+              className="bg-slate-900/50 border border-slate-700 rounded-2xl p-5 transition-colors hover:border-slate-600"
+            >
+              <div className="flex items-center justify-between mb-4 gap-3">
+                <span className="text-sm font-semibold text-white">{tech}</span>
+                <span className="text-[11px] uppercase tracking-[0.25em] text-slate-400">
+                  {level}
+                </span>
+              </div>
+
+              <div className="h-2.5 rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  className={`h-full rounded-full ${getBarColor(progress)}`}
+                  style={{ width: `${progress}%` }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,99 +1,125 @@
-export default function Project() {
+export default function Projects() {
   const projects = [
     {
-      num: "01",
-      tag: "Banca · Seguridad",
+      id: "01",
+      category: "Banca · Banco de Chile",
       title: "Aplicación MiPass",
       description:
-        "Sistema de autenticación digital y segundo factor (2FA) con validación biométrica y notificaciones en tiempo real para autorización de transacciones bancarias.",
-      impact: "Reducción de fraude transaccional en canal digital",
-      tech: ["Java", "Spring Boot", "Redis", "Docker", "JWT", "JUnit", "Mockito", "Maven"],
-      color: "blue",
+        "Plataforma de autenticación digital basada en microservicios para la gestión de identidad y autorización de transacciones bancarias en entornos de alta disponibilidad.",
+      highlights: [
+        "Reducción del fraude transaccional mediante autenticación fuerte (MFA)",
+        "Mejora en la latencia con procesamiento en tiempo real y mensajería asíncrona",
+        "Alta disponibilidad en sistemas críticos de autenticación",
+      ],
+      stack: ["Java", "Spring Boot", "Kafka", "Redis", "Docker", "JWT"],
     },
+
     {
-      num: "02",
-      tag: "Banca · Cumplimiento",
-      title: "Proyecto KYC",
+      id: "02",
+      category: "Banca · Scotiabank",
+      title: "KYC Platform",
       description:
-        "APIs REST para validación de identidad digital en procesos bancarios críticos, garantizando seguridad, trazabilidad y cumplimiento normativo.",
-      impact: "Cumplimiento regulatorio y trazabilidad total de identidad",
-      tech: ["Java", "Spring Boot", "Oracle", "JUnit", "Fortify", "Dynatrace"],
-      color: "violet",
+        "Sistema backend para validación y verificación de identidad de clientes, enfocado en procesos KYC dentro del sector financiero.",
+      highlights: [
+        "Diseño e implementación de APIs REST para procesos críticos de negocio",
+        "Mejora de performance cercana al 30% en servicios backend",
+        "Integración con equipos de seguridad, QA y negocio",
+      ],
+      stack: ["Java", "Spring Boot", "REST APIs", "JUnit", "Mockito"],
     },
+
     {
-      num: "03",
-      tag: "Fintech · Pagos",
-      title: "E-Wallet",
+      id: "03",
+      category: "Fintech · Jamaica",
+      title: "E-Wallet Platform",
       description:
-        "Plataforma de pagos digitales en tiempo real con arquitectura de microservicios, integración de mensajería y enfoque en alta disponibilidad.",
-      impact: "Alta disponibilidad en pagos digitales en tiempo real",
-      tech: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Kafka", "JUnit"],
-      color: "emerald",
+        "Plataforma de pagos digitales basada en microservicios, orientada a transferencias seguras y procesamiento en tiempo casi real.",
+      highlights: [
+        "Integración con Kafka para mensajería asíncrona",
+        "Procesamiento de eventos en tiempo real",
+        "Arquitectura escalable para transacciones financieras",
+      ],
+      stack: ["Java", "Spring Boot", "Kafka", "Docker", "PostgreSQL"],
+    },
+
+    {
+      id: "04",
+      category: "Proyecto personal",
+      title: "ATS Platform",
+      description:
+        "Sistema de seguimiento de candidatos diseñado con arquitectura hexagonal y enfoque en seguridad, escalabilidad y buenas prácticas.",
+      highlights: [
+        "Implementación de Clean Architecture y DDD",
+        "Autenticación y autorización con JWT",
+        "Diseño modular basado en microservicios",
+      ],
+      stack: ["Java", "Spring Boot", "PostgreSQL", "Docker", "JWT"],
     },
   ];
 
-  const colorMap = {
-    blue:    { tag: "text-blue-400",    pill: "bg-blue-500/10 border-blue-500/20 text-blue-300",     impact: "text-blue-400/70",    hover: "hover:border-blue-500/30" },
-    violet:  { tag: "text-violet-400",  pill: "bg-violet-500/10 border-violet-500/20 text-violet-300", impact: "text-violet-400/70",  hover: "hover:border-violet-500/30" },
-    emerald: { tag: "text-emerald-400", pill: "bg-emerald-500/10 border-emerald-500/20 text-emerald-300", impact: "text-emerald-400/70", hover: "hover:border-emerald-500/30" },
-  };
-
   return (
-    <section id="projects" className="bg-[#0b0f14] text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-20 bg-[#020817]">
+      <div className="max-w-6xl mx-auto px-6">
 
-        {/* Section header — mismo patrón */}
-        <div className="mb-10">
-          <h2 className="text-3xl font-bold text-white">Proyectos</h2>
-        </div>
+        <h2 className="text-3xl font-bold text-white mb-12">
+          Proyectos
+        </h2>
 
-        <div className="space-y-4">
-          {projects.map((project) => {
-            const c = colorMap[project.color];
-            return (
-              <div
-                key={project.num}
-                className={`group relative rounded-xl border border-slate-700 bg-slate-900/50 p-6 transition-all duration-300 ${c.hover} hover:bg-slate-900/80`}
-              >
-                {/* Arrow */}
-                <div className="absolute top-6 right-6 text-white/20 group-hover:text-white/60 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-lg">
-                  →
+        <div className="space-y-8">
+
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="rounded-xl border border-white/10 bg-[#0b1220] p-6 hover:border-blue-400/30 transition-colors"
+            >
+              
+              <div className="grid lg:grid-cols-[1fr_220px] gap-6 items-start">
+
+                {/* IZQUIERDA */}
+                <div>
+                  <p className="text-xs text-blue-400 mb-2">
+                    {project.id} {project.category}
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-white">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-white/70 mt-3 text-sm leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  <ul className="mt-4 space-y-2 text-blue-300 text-xs font-mono">
+                    {project.highlights.map((item, index) => (
+                      <li key={index}>→ {item}</li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Num + tag */}
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-mono text-white/20">{project.num}</span>
-                  <span className={`text-xs font-mono ${c.tag}`}>{project.tag}</span>
-                </div>
+                {/* DERECHA */}
+                <div className="flex flex-wrap gap-2 justify-start lg:justify-end lg:mt-6">
 
-                {/* Title */}
-                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-blue-100 transition-colors">
-                  {project.title}
-                </h3>
+                  <p className="w-full text-xs text-white/40 font-mono mb-2 text-right hidden lg:block">
+                    stack
+                  </p>
 
-                {/* Description */}
-                <p className="text-white/60 text-sm mb-3 max-w-2xl leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Impact */}
-                <p className={`text-xs font-mono mb-4 ${c.impact}`}>→ {project.impact}</p>
-
-                {/* Tech — mismo estilo que las pills del About */}
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((t) => (
+                  {project.stack.map((tech) => (
                     <span
-                      key={t}
-                      className={`px-2.5 py-1 text-xs font-mono rounded-md border ${c.pill}`}
+                      key={tech}
+                      className="px-3 py-1 text-xs font-mono rounded-md bg-[#0b1220] border border-slate-700 text-blue-300 hover:border-blue-400/40 transition-colors"
                     >
-                      {t}
+                      {tech}
                     </span>
                   ))}
                 </div>
+
               </div>
-            );
-          })}
+
+            </div>
+          ))}
+
         </div>
+
       </div>
     </section>
   );

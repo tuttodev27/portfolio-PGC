@@ -1,107 +1,141 @@
-import "devicon/devicon.min.css";
 export default function Experience() {
-  const experience = [
-    {
-      period: "2022 — presente",
-      role: "Senior Software Engineer",
-      company: "Empresa actual",
-      stack: "Java · Spring Boot · Microservicios",
-      current: true,
-    },
-    {
-      period: "2018 — 2022",
-      role: "Software Engineer",
-      company: "Empresa anterior",
-      stack: "Java · Spring · PostgreSQL",
-      current: false,
-    },
-    {
-      period: "2014 — 2018",
-      role: "Developer",
-      company: "Primeros años en TI",
-      stack: "Java · SQL · Backend",
-      current: false,
-    },
-  ];
-
-  const education = [
-    {
-      year: "20XX",
-      title: "Ingeniería en Informática / Sistemas",
-      institution: "Universidad",
-    },
-  ];
-
   return (
-    <section id="experience" className="bg-[#0b0f14] text-white py-20 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="py-20 scroll-mt-24 bg-[#020817]">
+      <div className="max-w-6xl mx-auto px-6">
 
-        {/* Section header — mismo patrón */}
-        <div className="mb-10">
-          <h2 className="text-3xl font-bold text-white">Experiencia</h2>
-        </div>
+        <h2 className="text-3xl font-bold text-white mb-12">
+          Experiencia
+        </h2>
 
-        <div className="grid md:grid-cols-[1fr_auto] gap-10 items-start">
+        <div className="space-y-6">
 
-          {/* Timeline */}
-          <div className="space-y-3">
-            {experience.map((exp, i) => (
-              <div
-                key={i}
-                className={`rounded-xl border p-5 transition-colors ${
-                  exp.current
-                    ? "bg-slate-900/80 border-blue-500/30"
-                    : "bg-slate-900/50 border-slate-700 hover:border-slate-600"
-                }`}
-              >
-                <div className="flex items-start justify-between gap-4 mb-2">
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      {exp.current && (
-                        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-900/30 border border-emerald-500/20 text-emerald-300 text-xs font-mono">
-                          <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                          actual
-                        </span>
-                      )}
-                    </div>
-                    <h3 className="text-base font-bold text-white">{exp.role}</h3>
-                    <p className="text-white/50 text-sm">{exp.company}</p>
-                  </div>
-                  <span className="text-xs font-mono text-white/30 whitespace-nowrap mt-1">{exp.period}</span>
-                </div>
-                <p className="text-xs font-mono text-blue-400/60 mt-3">{exp.stack}</p>
+          {/* Qintess */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <div className="flex justify-between items-start flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-semibold text-white">
+                  Senior Backend Engineer
+                </h3>
+                <p className="text-sm text-white/60">
+                  Qintess · Proyecto: Banco de Chile
+                </p>
               </div>
-            ))}
+              <span className="text-sm text-white/40">2025</span>
+            </div>
+
+            <ul className="mt-4 space-y-2 text-white/80 text-sm leading-relaxed">
+              <li>Participé en la migración de microservicios desde Java 11 a Java 21 en sistemas financieros de alta criticidad.</li>
+              <li>Identifiqué y resolví un problema de configuración en Kubernetes que impactaba el rendimiento bajo alta carga.</li>
+              <li>Refactoricé flujos de negocio aplicando patrones de diseño, mejorando la mantenibilidad y escalabilidad.</li>
+            </ul>
+
+            <p className="mt-4 text-xs text-white/40">
+              Java · Spring Boot · Kubernetes · Elastic Stack · JMeter · Jenkins
+            </p>
           </div>
 
-          {/* Stats card — mismo estilo code block del Hero */}
-          <div className="bg-[#0f172a] border border-slate-700 rounded-xl p-5 font-mono text-sm w-full md:w-64">
-            <p className="text-blue-300/60 text-xs mb-4">// resumen</p>
-            <div className="space-y-4">
-              {[
-                { n: "10+", l: "años en TI" },
-                { n: "8",   l: "años en Java" },
-                { n: "Sr.", l: "nivel actual" },
-              ].map(({ n, l }) => (
-                <div key={l} className="flex items-baseline justify-between border-b border-slate-700/50 pb-3 last:border-0 last:pb-0">
-                  <span className="text-white/40 text-xs">{l}</span>
-                  <span className="text-blue-400 text-xl font-bold">{n}</span>
-                </div>
-              ))}
+          {/* Scotiabank */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <div className="flex justify-between items-start flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-semibold text-white">
+                  Software Engineer
+                </h3>
+                <p className="text-sm text-white/60">
+                  ImageMaker · Proyecto: Scotiabank (KYC)
+                </p>
+              </div>
+              <span className="text-sm text-white/40">2023 – 2024</span>
             </div>
 
-            <div className="mt-5 pt-4 border-t border-slate-700/50">
-              <p className="text-blue-300/60 text-xs mb-3">// educación</p>
-              {education.map((e, i) => (
-                <div key={i}>
-                  <p className="text-white/70 text-xs leading-relaxed">{e.title}</p>
-                  <p className="text-white/30 text-xs font-mono mt-1">{e.institution} · {e.year}</p>
-                </div>
-              ))}
+            <ul className="mt-4 space-y-2 text-white/80 text-sm leading-relaxed">
+              <li>Diseñé e implementé APIs REST para procesos KYC en sistemas financieros.</li>
+              <li>Optimicé consultas y lógica de negocio, mejorando el rendimiento de microservicios en ~30%.</li>
+              <li>Implementé pruebas unitarias e integración con JUnit y Mockito, elevando la calidad del código.</li>
+            </ul>
+
+            <p className="mt-4 text-xs text-white/40">
+              Java · Spring Boot · Oracle · JWT · JUnit · Mockito · CI/CD
+            </p>
+          </div>
+
+          {/* Genesys */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <div className="flex justify-between items-start flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-semibold text-white">
+                  Software Engineer
+                </h3>
+                <p className="text-sm text-white/60">
+                  Genesys · Proyecto: Banco Consorcio
+                </p>
+              </div>
+              <span className="text-sm text-white/40">2021 – 2022</span>
             </div>
+
+            <ul className="mt-4 space-y-2 text-white/80 text-sm leading-relaxed">
+              <li>Desarrollé APIs REST para procesos de migración de tarjetas de crédito.</li>
+              <li>Mejoré la eficiencia del sistema en aproximadamente un 20% mediante optimización backend.</li>
+              <li>Validé integraciones y calidad de servicios mediante pruebas funcionales.</li>
+            </ul>
+
+            <p className="mt-4 text-xs text-white/40">
+              Java · Spring Boot · SQL · Integración de sistemas
+            </p>
+          </div>
+
+          {/* E-wallet */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <div className="flex justify-between items-start flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-semibold text-white">
+                  Backend Developer
+                </h3>
+                <p className="text-sm text-white/60">
+                  The Bridge Social · Proyecto: E-Wallet
+                </p>
+              </div>
+              <span className="text-sm text-white/40">2021</span>
+            </div>
+
+            <ul className="mt-4 space-y-2 text-white/80 text-sm leading-relaxed">
+              <li>Diseñé e implementé microservicios en Java para plataforma de pagos digitales.</li>
+              <li>Implementé comunicación asincrónica con Apache Kafka para procesamiento en tiempo real.</li>
+              <li>Aplicación de patrones de diseño para mejorar mantenibilidad del sistema.</li>
+            </ul>
+
+            <p className="mt-4 text-xs text-white/40">
+              Java · Spring Boot · Kafka · Microservices
+            </p>
+          </div>
+
+          {/* UC */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm">
+            <div className="flex justify-between items-start flex-wrap gap-2">
+              <div>
+                <h3 className="text-xl font-semibold text-white">
+                  IT Support Engineer
+                </h3>
+                <p className="text-sm text-white/60">
+                  Pontificia Universidad Católica de Chile
+                </p>
+              </div>
+              <span className="text-sm text-white/40">2011 – 2020</span>
+            </div>
+
+            <ul className="mt-4 space-y-2 text-white/80 text-sm leading-relaxed">
+              <li>Soporte de segundo nivel para sistemas institucionales críticos.</li>
+              <li>Participación en migraciones de aplicaciones Java y servidores Apache.</li>
+              <li>Implementación de dashboards en Kibana para monitoreo de sistemas.</li>
+            </ul>
+
+            <p className="mt-4 text-xs text-white/40">
+              Linux · Java · Apache · Kibana · Soporte TI
+            </p>
           </div>
 
         </div>
+
       </div>
     </section>
   );
