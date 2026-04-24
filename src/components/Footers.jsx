@@ -23,44 +23,41 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { label: "sobre mí", href: "#sobre-mi" },
-    { label: "proyectos", href: "#projects" },
+    { label: "sobre mí",    href: "#sobre-mi"   },
+    { label: "proyectos",   href: "#projects"   },
     { label: "experiencia", href: "#experience" },
-    { label: "contacto", href: "#contact" },
+    { label: "educación",   href: "#educacion"  },
+    { label: "contacto",    href: "#contact"    },
   ];
 
   return (
     <footer className="bg-[#0b0f14] text-white px-6 pt-12 pb-8 border-t border-slate-800">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-10 items-start">
+
+        {/* Grid — apilado en móvil */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+          {/* Descripción */}
           <div>
             <span className="inline-block px-3 py-1 text-xs rounded-md bg-slate-800/80 border border-slate-700 text-blue-400 font-mono mb-4">
-              // footer
+              // pablo.dev
             </span>
-
-            <h3 className="text-2xl font-bold tracking-tight mb-3">
-              Pablo Gallegos
-            </h3>
-
+            <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3">Pablo Gallegos</h3>
             <p className="text-slate-400 text-sm leading-7 max-w-md">
               Senior Backend Java Engineer enfocado en microservicios,
               arquitectura escalable y sistemas de alta criticidad.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-8">
+          {/* Links + Social */}
+          <div className="grid grid-cols-2 gap-8">
             <div>
               <h4 className="text-xs font-mono text-white/30 tracking-widest uppercase mb-4">
                 enlaces rápidos
               </h4>
-
               <div className="flex flex-col gap-3">
                 {quickLinks.map(({ label, href }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    className="text-slate-400 hover:text-blue-400 transition-colors text-sm w-fit"
-                  >
+                  <a key={label} href={href} className="text-slate-400 hover:text-blue-400 transition-colors text-sm w-fit">
                     {label}
                   </a>
                 ))}
@@ -71,7 +68,6 @@ export default function Footer() {
               <h4 className="text-xs font-mono text-white/30 tracking-widest uppercase mb-4">
                 conectemos
               </h4>
-
               <div className="flex gap-3">
                 {socialLinks.map(({ name, href, icon }) => (
                   <a
@@ -90,15 +86,16 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        {/* Bottom */}
+        <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <p className="text-slate-500 text-sm">
             © {currentYear} Pablo Gallegos. Todos los derechos reservados.
           </p>
-
           <p className="text-slate-600 text-xs font-mono">
             Built with React + Tailwind CSS
           </p>
         </div>
+
       </div>
     </footer>
   );
