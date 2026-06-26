@@ -53,7 +53,7 @@ export default function About() {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <section id="sobre-mi" className="scroll-mt-24 bg-[#0a192f] text-white py-24 px-6">
+    <section id="sobre-mi" className="scroll-mt-24 bg-[#0a192f] text-white py-12 md:py-24 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
 
         <div className="mb-10 section-header">
@@ -62,7 +62,7 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-[1.25fr_0.9fr] gap-8 items-stretch">
+        <div className="grid lg:grid-cols-[1.25fr_0.9fr] gap-6 lg:gap-8 items-stretch">
 
           {/* IZQUIERDA — terminal animada */}
           <div className="bg-[#000000] rounded-xl border border-[#233554] shadow-lg overflow-hidden">
@@ -73,7 +73,7 @@ export default function About() {
               <span className="text-white/40 text-xs font-mono ml-auto">Pablo.java</span>
             </div>
 
-            <div className="p-6 font-mono text-sm text-[#64ffda] min-h-[300px] md:min-h-[340px]">
+            <div className="p-4 md:p-6 font-mono text-sm text-[#64ffda] min-h-[200px] sm:min-h-[300px] md:min-h-[340px]">
               <pre className="whitespace-pre-wrap break-words leading-7">
                 {displayedCode}
                 {displayedCode.length < fullCode.length && (

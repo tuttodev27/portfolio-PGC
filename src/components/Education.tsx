@@ -1,7 +1,7 @@
 export default function Education() {
   return (
-    <section id="educacion" className="py-20 scroll-mt-24 bg-[#0a192f]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="educacion" className="py-12 md:py-20 scroll-mt-24 bg-[#0a192f]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <div className="section-header">
           <h2 className="section-title">Educación</h2>

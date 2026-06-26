@@ -119,7 +119,7 @@ export default function Contact() {
           </div>
 
           {/* Right — form */}
-          <div className="bg-[#112240]/50 border border-[#233554] rounded-2xl p-6">
+          <div className="bg-[#112240]/50 border border-[#233554] rounded-2xl p-4 sm:p-6">
 
             {status === "success" ? (
               <div className="flex flex-col items-center justify-center text-center py-10">

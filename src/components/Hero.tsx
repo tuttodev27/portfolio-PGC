@@ -20,7 +20,7 @@ export default function Hero() {
     <section className="section-base min-h-screen relative overflow-hidden">
       <div className="absolute top-0 left-1/3 w-[500px] h-[300px] bg-[#64ffda]/4 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="container-max py-20 grid md:grid-cols-[1fr_auto] gap-16 items-center relative z-10">
+      <div className="container-max py-12 md:py-20 grid md:grid-cols-[1fr_auto] gap-10 md:gap-16 items-center relative z-10">
 
         {/* LEFT */}
         <div>
@@ -30,7 +30,7 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[0.95] mb-5">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tight leading-[0.95] mb-5">
             Hola, soy<br />
             <span className="text-[#64ffda]">Pablo</span>
             <span className="text-white/15">.</span>
@@ -50,7 +50,7 @@ export default function Hero() {
             arquitecturas robustas, APIs escalables y sistemas de alta criticidad.
           </p>
 
-          <div className="flex gap-8 mb-8 pb-8 border-b border-white/5">
+          <div className="flex gap-5 md:gap-8 mb-6 pb-6 md:mb-8 md:pb-8 border-b border-white/5">
             {stats.map(([num, label]) => (
               <div key={label}>
                 <div className="stat-number">{num}</div>
@@ -105,7 +105,7 @@ export default function Hero() {
       </div>
 
       {/* Stack Técnico */}
-      <div className="max-w-6xl mx-auto px-6 mt-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-10 md:mt-16">
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-white">Stack Técnico</h2>
         </div>

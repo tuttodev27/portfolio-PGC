@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 scroll-mt-24 bg-[#0a192f]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="experience" className="py-12 md:py-20 scroll-mt-24 bg-[#0a192f]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <h2 className="text-3xl font-bold text-white mb-12">
           Experiencia
@@ -10,7 +10,7 @@ export default function Experience() {
         <div className="space-y-6">
 
           {/* Qintess */}
-          <div className="rounded-2xl border border-white/10 bg-[#112240] p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-white/10 bg-[#112240] p-4 sm:p-4 sm:p-6 backdrop-blur-sm">
             <div className="flex justify-between items-start flex-wrap gap-2">
               <div>
                 <h3 className="text-xl font-semibold text-white">
@@ -35,7 +35,7 @@ export default function Experience() {
           </div>
 
           {/* Scotiabank */}
-          <div className="rounded-2xl border border-white/10 bg-[#112240] p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-white/10 bg-[#112240] p-4 sm:p-4 sm:p-6 backdrop-blur-sm">
             <div className="flex justify-between items-start flex-wrap gap-2">
               <div>
                 <h3 className="text-xl font-semibold text-white">
@@ -60,7 +60,7 @@ export default function Experience() {
           </div>
 
           {/* Genesys */}
-          <div className="rounded-2xl border border-white/10 bg-[#112240] p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-white/10 bg-[#112240] p-4 sm:p-6 backdrop-blur-sm">
             <div className="flex justify-between items-start flex-wrap gap-2">
               <div>
                 <h3 className="text-xl font-semibold text-white">
@@ -85,7 +85,7 @@ export default function Experience() {
           </div>
 
           {/* E-wallet */}
-          <div className="rounded-2xl border border-white/10 bg-[#112240] p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-white/10 bg-[#112240] p-4 sm:p-6 backdrop-blur-sm">
             <div className="flex justify-between items-start flex-wrap gap-2">
               <div>
                 <h3 className="text-xl font-semibold text-white">
@@ -110,7 +110,7 @@ export default function Experience() {
           </div>
 
           {/* UC */}
-          <div className="rounded-2xl border border-white/10 bg-[#112240] p-6 backdrop-blur-sm">
+          <div className="rounded-2xl border border-white/10 bg-[#112240] p-4 sm:p-6 backdrop-blur-sm">
             <div className="flex justify-between items-start flex-wrap gap-2">
               <div>
                 <h3 className="text-xl font-semibold text-white">

@@ -67,8 +67,8 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-[#0a192f]">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-12 md:py-20 bg-[#0a192f]">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
 
         <h2 className="text-3xl font-bold text-white mb-12">
           Proyectos
@@ -79,7 +79,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="rounded-xl border border-white/10 bg-[#112240] p-6 hover:border-[#64ffda]/30 transition-colors"
+              className="rounded-xl border border-white/10 bg-[#112240] p-4 sm:p-6 hover:border-[#64ffda]/30 transition-colors"
             >
               
               <div className="grid lg:grid-cols-[1fr_220px] gap-6 items-start">
