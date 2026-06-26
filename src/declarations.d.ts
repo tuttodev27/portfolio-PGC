@@ -1,6 +1,6 @@
-// src/declarations.d.ts
 declare module '*.jsx' {
-  const content: any;
+  import type { ComponentType } from 'react';
+  const content: ComponentType<object>;
   export default content;
 }
 

@@ -10,14 +10,13 @@ html {
    VARIABLES CSS PERSONALIZADAS
    =========================================== */
 :root {
-  --bg-primary: #0b0f14;
-  --bg-secondary: #0f172a;
+  --bg-primary: #0a192f;
+  --bg-secondary: #112240;
   --bg-terminal: #000000;
   --text-white: #ffffff;
-  --text-blue-400: #60a5fa;
-  --text-green-400: #4ade80;
-  --border-slate-700: #334155;
-  --border-slate-800: #1e293b;
+  --text-accent: #64ffda;
+  --border-color: #233554;
+  --text-slate: #8892b0;
 }
 
 /* ===========================================
@@ -30,11 +29,10 @@ html {
 
   .text-primary { color: var(--text-white); }
   .text-secondary { color: rgba(255,255,255,0.6); }
-  .text-accent { color: var(--text-blue-400); }
-  .text-terminal { color: var(--text-green-400); }
+  .text-accent { color: var(--text-accent); }
 
-  .border-primary { border-color: var(--border-slate-700); }
-  .border-secondary { border-color: var(--border-slate-800); }
+  .border-primary { border-color: var(--border-color); }
+  .border-secondary { border-color: rgba(255,255,255,0.05); }
 }
 
 /* ===========================================
@@ -44,14 +42,14 @@ html {
 
   /* Layout base */
   .section-base {
-    @apply bg-[#0b0f14] text-white py-20 px-6;
+    @apply bg-[#0a192f] text-white py-20 px-6;
   }
 
   .container-max {
     @apply max-w-6xl mx-auto;
   }
 
-  /* Headers de sección — patrón con badge // */
+  /* Headers de sección */
   .section-header {
     @apply mb-10;
   }
@@ -62,16 +60,16 @@ html {
 
   /* Tarjetas */
   .card-base {
-    @apply relative group bg-[#0f172a] border border-slate-700 rounded-xl transition-all duration-300 hover:border-slate-600;
+    @apply relative group bg-[#112240] border border-[#233554] rounded-xl transition-all duration-300 hover:border-[#64ffda]/40;
   }
 
   .card-terminal {
-    @apply bg-[#111827] border border-slate-700 rounded-[28px] shadow-[0_30px_80px_-40px_rgba(15,23,42,0.85)] overflow-hidden;
+    @apply bg-[#112240] border border-[#233554] rounded-[28px] shadow-[0_30px_80px_-40px_rgba(10,25,47,0.85)] overflow-hidden;
   }
 
   /* Terminal */
   .terminal-header {
-    @apply bg-slate-950/90 px-4 py-3 flex items-center gap-2 border-b border-slate-800;
+    @apply bg-[#112240]/90 px-4 py-3 flex items-center gap-2 border-b border-[#233554];
   }
 
   .terminal-window {
@@ -80,37 +78,37 @@ html {
 
   .terminal-red    { @apply bg-red-500; }
   .terminal-yellow { @apply bg-yellow-500; }
-  .terminal-green  { @apply bg-green-500; }
+  .terminal-green  { @apply bg-[#64ffda]; }
 
   .terminal-content {
-    @apply p-6 font-mono text-sm text-white/90 min-h-[340px] bg-[#0b1220];
+    @apply p-6 font-mono text-sm text-white/90 min-h-[340px] bg-[#0a192f];
   }
 
   /* Navegación */
   .nav-link {
-    @apply px-3 py-1.5 rounded-md text-xs font-mono text-white/40 hover:text-white/80 hover:bg-white/5 transition-all;
+    @apply px-3 py-1.5 rounded-md text-xs font-mono text-[#8892b0] hover:text-white/80 hover:bg-white/5 transition-all;
   }
 
   .nav-brand {
-    @apply text-sm font-bold text-white/80 tracking-tight hover:text-white transition-colors;
+    @apply text-sm font-bold text-white/80 tracking-tight hover:text-[#64ffda] transition-colors;
   }
 
   /* Botones */
   .btn-primary {
-    @apply px-6 py-2.5 rounded-lg bg-blue-500 hover:bg-blue-400 transition-colors font-semibold text-sm shadow-lg shadow-blue-500/20;
+    @apply px-6 py-2.5 rounded-lg bg-[#64ffda] hover:bg-[#64ffda]/80 transition-colors font-semibold text-sm text-[#0a192f] shadow-lg shadow-[#64ffda]/20;
   }
 
   .btn-secondary {
-    @apply px-6 py-2.5 rounded-lg border border-white/10 hover:border-white/20 hover:bg-white/5 transition-all text-sm font-medium text-white/60 hover:text-white;
+    @apply px-6 py-2.5 rounded-lg border border-[#233554] hover:border-[#64ffda]/40 hover:bg-[#64ffda]/5 transition-all text-sm font-medium text-[#8892b0] hover:text-[#64ffda];
   }
 
   .btn-cta {
-    @apply px-4 py-1.5 rounded-md bg-blue-500/15 border border-blue-500/25 text-blue-400 text-xs font-mono hover:bg-blue-500/25 transition-all;
+    @apply px-4 py-1.5 rounded-md bg-[#64ffda]/15 border border-[#64ffda]/25 text-[#64ffda] text-xs font-mono hover:bg-[#64ffda]/25 transition-all;
   }
 
   /* Formularios */
   .form-input {
-    @apply w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-xl text-white text-sm placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 transition-all;
+    @apply w-full px-4 py-2.5 bg-[#112240] border border-[#233554] rounded-xl text-white text-sm placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-[#64ffda]/50 focus:border-[#64ffda]/50 transition-all;
   }
 
   .form-label {
@@ -119,7 +117,7 @@ html {
 
   /* Stats */
   .stat-number {
-    @apply text-2xl font-black text-blue-400 tracking-tight;
+    @apply text-2xl font-black text-[#64ffda] tracking-tight;
   }
 
   .stat-label {
@@ -128,11 +126,11 @@ html {
 
   /* Skills */
   .skill-card {
-    @apply bg-[#0f172a] border border-slate-700 rounded-2xl p-5 transition-colors hover:border-slate-600;
+    @apply bg-[#112240] border border-[#233554] rounded-2xl p-5 transition-colors hover:border-[#64ffda]/40;
   }
 
   .skill-bar {
-    @apply h-2.5 rounded-full bg-slate-800 overflow-hidden;
+    @apply h-2.5 rounded-full bg-[#112240] overflow-hidden;
   }
 
   .skill-fill {
@@ -144,7 +142,7 @@ html {
     display: inline-block;
     width: 2px;
     height: 1.2em;
-    background: var(--text-green-400);
+    background: var(--text-accent);
     animation: blink 1s infinite;
   }
 

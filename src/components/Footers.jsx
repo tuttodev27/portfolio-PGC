@@ -23,41 +23,44 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { label: "sobre mí",    href: "#sobre-mi"   },
-    { label: "proyectos",   href: "#projects"   },
+    { label: "sobre mí", href: "#sobre-mi" },
+    { label: "proyectos", href: "#projects" },
     { label: "experiencia", href: "#experience" },
-    { label: "educación",   href: "#educacion"  },
-    { label: "contacto",    href: "#contact"    },
+    { label: "contacto", href: "#contact" },
   ];
 
   return (
-    <footer className="bg-[#0b0f14] text-white px-6 pt-12 pb-8 border-t border-slate-800">
+    <footer className="bg-[#0a192f] text-white px-6 pt-12 pb-8 border-t border-[#233554]">
       <div className="max-w-6xl mx-auto">
-
-        {/* Grid — apilado en móvil */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-
-          {/* Descripción */}
+        <div className="grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <span className="inline-block px-3 py-1 text-xs rounded-md bg-slate-800/80 border border-slate-700 text-blue-400 font-mono mb-4">
-              // pablo.dev
+            <span className="inline-block px-3 py-1 text-xs rounded-md bg-[#112240]/80 border border-[#233554] text-[#64ffda] font-mono mb-4">
+              // footer
             </span>
-            <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3">Pablo Gallegos</h3>
-            <p className="text-slate-400 text-sm leading-7 max-w-md">
+
+            <h3 className="text-2xl font-bold tracking-tight mb-3">
+              Pablo Gallegos
+            </h3>
+
+            <p className="text-[#8892b0] text-sm leading-7 max-w-md">
               Senior Backend Java Engineer enfocado en microservicios,
               arquitectura escalable y sistemas de alta criticidad.
             </p>
           </div>
 
-          {/* Links + Social */}
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-8">
             <div>
               <h4 className="text-xs font-mono text-white/30 tracking-widest uppercase mb-4">
                 enlaces rápidos
               </h4>
+
               <div className="flex flex-col gap-3">
                 {quickLinks.map(({ label, href }) => (
-                  <a key={label} href={href} className="text-slate-400 hover:text-blue-400 transition-colors text-sm w-fit">
+                  <a
+                    key={label}
+                    href={href}
+                    className="text-[#8892b0] hover:text-[#64ffda] transition-colors text-sm w-fit"
+                  >
                     {label}
                   </a>
                 ))}
@@ -68,6 +71,7 @@ export default function Footer() {
               <h4 className="text-xs font-mono text-white/30 tracking-widest uppercase mb-4">
                 conectemos
               </h4>
+
               <div className="flex gap-3">
                 {socialLinks.map(({ name, href, icon }) => (
                   <a
@@ -76,7 +80,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={name}
-                    className="w-10 h-10 bg-slate-800 border border-slate-700 rounded-lg flex items-center justify-center text-slate-400 hover:bg-blue-500/15 hover:text-blue-400 hover:border-blue-500/30 transition-all"
+                    className="w-10 h-10 bg-[#112240] border border-[#233554] rounded-lg flex items-center justify-center text-[#8892b0] hover:bg-[#64ffda]/15 hover:text-[#64ffda] hover:border-[#64ffda]/30 transition-all"
                   >
                     {icon}
                   </a>
@@ -86,16 +90,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-          <p className="text-slate-500 text-sm">
-            © {currentYear} Pablo Gallegos. Todos los derechos reservados.
+        <div className="border-t border-[#233554] mt-10 pt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+          <p className="text-[#8892b0] text-sm">
+            &copy; {currentYear} Pablo Gallegos. Todos los derechos reservados.
           </p>
-          <p className="text-slate-600 text-xs font-mono">
+
+          <p className="text-[#8892b0]/60 text-xs font-mono">
             Built with React + Tailwind CSS
           </p>
         </div>
-
       </div>
     </footer>
   );
