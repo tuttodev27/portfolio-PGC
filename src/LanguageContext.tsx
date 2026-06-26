@@ -1,17 +1,24 @@
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, type ReactNode } from "react";
 import { translations } from "./translations";
 
-const LanguageContext = createContext();
+type Language = "es" | "en";
+type TranslationValue = typeof translations.es;
 
-export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState(() => {
-    // Intentar leer el idioma guardado en localStorage
-    const saved = localStorage.getItem("language");
+interface LanguageContextValue {
+  language: Language;
+  toggleLanguage: () => void;
+  t: TranslationValue;
+}
+
+const LanguageContext = createContext<LanguageContextValue | null>(null);
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguage] = useState<Language>(() => {
+    const saved = localStorage.getItem("language") as Language | null;
     return saved || "es";
   });
 
   useEffect(() => {
-    // Guardar el idioma en localStorage cuando cambie
     localStorage.setItem("language", language);
   }, [language]);
 
@@ -28,6 +35,7 @@ export function LanguageProvider({ children }) {
   );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (!context) {
@@ -35,4 +43,3 @@ export function useLanguage() {
   }
   return context;
 }
-

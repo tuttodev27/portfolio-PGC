@@ -50,7 +50,7 @@ export default function About() {
       }
     }, 20);
     return () => clearInterval(interval);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <section id="sobre-mi" className="scroll-mt-24 bg-[#0a192f] text-white py-24 px-6">

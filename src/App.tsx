@@ -1,11 +1,11 @@
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Experience from "./components/Experience.jsx";
-import Educacion from "./components/Education.jsx";
-import Project from "./components/Project.jsx";
-import Contact from "./components/Contact.jsx";
-import Footers from "./components/Footers.jsx";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Projects from "./components/Project";
+import Contact from "./components/Contact";
+import Footer from "./components/Footers";
 
 export default function App() {
   return (
@@ -13,11 +13,11 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
-      <Project />
+      <Projects />
       <Experience />
-      <Educacion />
+      <Education />
       <Contact />
-      <Footers />
+      <Footer />
     </>
   );
 }

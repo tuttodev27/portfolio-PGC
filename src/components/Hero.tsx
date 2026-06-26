@@ -1,5 +1,5 @@
 export default function Hero() {
-  const stack = [
+  const stack: { tech: string; level: string; progress: number }[] = [
     { tech: "Java", level: "experto", progress: 100 },
     { tech: "Spring Boot / Spring Security",  level: "avanzado", progress: 88 },
     { tech: "SQL / PostgreSQL", level: "experto", progress: 100 },
@@ -10,11 +10,12 @@ export default function Hero() {
     { tech: "Kafka", level: "intermedio", progress: 80 },
   ];
 
-  const getBarColor = (percent) => {
-    if (percent >= 90) return "bg-[#64ffda]";
-    if (percent >= 80) return "bg-[#64ffda]";
-    return "bg-[#64ffda]";
-  };
+  const stats: [string, string][] = [
+    ["10+", "años en TI"],
+    ["8", "años en Java"],
+    ["3", "proyectos clave"],
+  ];
+
   return (
     <section className="section-base min-h-screen relative overflow-hidden">
       <div className="absolute top-0 left-1/3 w-[500px] h-[300px] bg-[#64ffda]/4 rounded-full blur-3xl pointer-events-none" />
@@ -24,7 +25,6 @@ export default function Hero() {
         {/* LEFT */}
         <div>
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-[#233554] bg-[#112240]/80 mb-6">
-            <span className="text-[#64ffda]/60 font-mono text-xs"></span>
             <span className="text-[#64ffda] font-mono text-xs tracking-wide">
               Senior Software Engineer · Java · Spring Boot · JavaScript · 10+ años
             </span>
@@ -51,10 +51,10 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-8 mb-8 pb-8 border-b border-white/5">
-            {[["10+","años en TI"],["8","años en Java"],["3","proyectos clave"]].map(([n,l]) => (
-              <div key={l}>
-                <div className="stat-number">{n}</div>
-                <div className="stat-label">{l}</div>
+            {stats.map(([num, label]) => (
+              <div key={label}>
+                <div className="stat-number">{num}</div>
+                <div className="stat-label">{label}</div>
               </div>
             ))}
           </div>
@@ -125,7 +125,7 @@ export default function Hero() {
 
               <div className="h-2.5 rounded-full bg-[#112240] overflow-hidden">
                 <div
-                  className={`h-full rounded-full ${getBarColor(progress)}`}
+                  className="h-full rounded-full bg-[#64ffda]"
                   style={{ width: `${progress}%` }}
                 />
               </div>

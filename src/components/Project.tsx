@@ -1,5 +1,14 @@
+interface Project {
+  id: string;
+  category: string;
+  title: string;
+  description: string;
+  highlights: string[];
+  stack: string[];
+}
+
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
       id: "01",
       category: "Banca · Banco de Chile",

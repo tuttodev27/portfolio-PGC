@@ -1,19 +1,49 @@
-import { useState } from "react";
+import { useState, type FormEvent, type ChangeEvent } from "react";
+
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+type Status = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
-  const [status, setStatus] = useState("idle");
+  const [formData, setFormData] = useState<FormData>({ name: "", email: "", subject: "", message: "" });
+  const [status, setStatus] = useState<Status>("idle");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
-    setTimeout(() => {
+
+    const formId = import.meta.env.VITE_FORMSPREE_ID as string | undefined;
+
+    if (!formId) {
+      console.warn("VITE_FORMSPREE_ID not set. Configure it in .env for real submissions.");
+      await new Promise((r) => setTimeout(r, 1500));
       setStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 1500);
+      return;
+    }
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${formId}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Formspree request failed");
+
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch {
+      setStatus("error");
+    }
   };
 
-  const handleChange = (e) =>
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const inputClass =
@@ -80,7 +110,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <span className="text-white/25 text-xs">github → </span>
-                    <span className="text-white/60 text-xs">github.com/pablo</span>
+                    <span className="text-white/60 text-xs">github.com/tuttodev27</span>
                   </div>
                 </div>
 
@@ -129,6 +159,10 @@ export default function Contact() {
                   <label className="block text-xs font-mono text-white/40 tracking-widest uppercase mb-2">Mensaje</label>
                   <textarea name="message" value={formData.message} onChange={handleChange} required rows={4} placeholder="Cuéntame más..." className={`${inputClass} resize-none`} />
                 </div>
+
+                {status === "error" && (
+                  <p className="text-red-400 text-xs">Error al enviar. Intenta de nuevo o escríbeme directo a LinkedIn.</p>
+                )}
 
                 <button
                   type="submit"
